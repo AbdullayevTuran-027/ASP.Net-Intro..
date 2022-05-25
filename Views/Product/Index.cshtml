@@ -1,0 +1,22 @@
+﻿@using ASP.Net_MVC_Intro.Models
+@model List<Product>
+@{
+    ViewData["Title"] = "Product";
+}
+<div class="row-mt-5">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="~/uploads/images/@product.Image" class="card-img-top" alt="@product.Name">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">@product.Description</p>
+                    <p class="card-text">Price: @product.Price $</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
